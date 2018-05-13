@@ -1,2 +1,8 @@
 @import "materialize";
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
+.link_logo {
+  display: inline !important;
+  margin-right: -2px !important;
+  font-size: inherit !important;
+}
