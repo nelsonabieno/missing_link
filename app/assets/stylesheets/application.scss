@@ -1,6 +1,12 @@
 @import "materialize";
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
 
+body {
+  background-image:  url("79.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%
+}
+
 .link_logo {
   display: inline !important;
   margin-right: -2px !important;
