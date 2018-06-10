@@ -5,6 +5,7 @@ body {
   background-image:  url("79.jpg");
   background-repeat: no-repeat;
   background-size: 1450px 676px;
+  margin-top: 100px;
 }
 
 .link_logo {
@@ -15,4 +16,19 @@ body {
 
 .page-footer {
   margin-top: 420px;
+}
+
+.form {
+  border-style: solid;
+  margin-left: 450px;
+  height: 300px;
+  padding: 10px 10px 10px 10px;
+  margin-right: 450px;
+  align-items: center;
+  background-color: white;
+}
+
+h5 {
+  text-align: center;
+  color: white;
 }
