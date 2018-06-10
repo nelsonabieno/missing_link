@@ -1,0 +1,38 @@
+
+<div class="form row">
+  <table class="striped">
+    <thead>
+    <tr>
+      <th>#</th>
+      <th>Title</th>
+      <th>Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+        <th><%= article.id %></th>
+        <td><%= article.title %></td>
+        <td><%= article.description %></td>
+
+        <td>
+          <%= link_to   do %>
+              <i class="material-icons">pageview</i>
+          <% end %>
+        </td>
+        <td>
+          <%= link_to   do %>
+              <i class="material-icons">edit</i>
+          <% end %>
+        </td>
+        <td>
+          <%= link_to   do %>
+              <i class="material-icons materialize-red-text">delete</i>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
