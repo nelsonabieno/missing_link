@@ -1,4 +1,13 @@
 <h5> Create an Article</h5>
 <br/>
 <br/>
+  <% if @article.errors.any?%>
+    <div class="card red lighten-2">
+      <% @article.errors.full_messages.each do |msg| %>
+          <ul>
+            <li> <%= msg %></li>
+          </ul>
+      <%end%>
+    </div>
+  <% end%>
 <%= render 'partials/form'%>

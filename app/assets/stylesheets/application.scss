@@ -21,7 +21,7 @@ body {
 .form {
   border-style: solid;
   margin-left: 450px;
-  min-height: 300px;
+  min-height: 100px;
   padding: 10px 10px 10px 10px;
   margin-right: 450px;
   align-items: center;
@@ -31,4 +31,13 @@ body {
 h5 {
   text-align: center;
   color: white;
+}
+
+ul {
+  text-align: center;
+}
+
+.card {
+  max-width: 300px;
+  margin: 0 auto !important;
 }
