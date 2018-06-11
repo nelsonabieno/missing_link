@@ -1,0 +1,17 @@
+<h5>Edit Article</h5>
+<% if flash[:notice]%>
+    <div class="card green lighten-2">
+      <h5><%=flash[:notice]%></h5>
+    </div>
+<%end %>
+
+<% if @article.errors.any?%>
+    <div class="card red lighten-2">
+      <ul>
+        <% @article.errors.full_messages.each do |msg| %>
+            <li> <%= msg %></li>
+        <%end%>
+      </ul>
+    </div>
+<% end%>
+<%= render "partials/form" %>

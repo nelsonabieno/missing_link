@@ -1,15 +1,13 @@
 <% if flash[:notice]%>
-   <script>
-       //= require jquery
-       console.log("huhdh")
-      $(function(){Materialize.toast("<%=flash[:notice]%>", 5000);});
-   </script>
-    <h5><%=flash[:notice]%></h5>
+    <div class="card green lighten-2">
+      <h5><%=flash[:notice]%></h5>
+    </div>
 <%end %>
-
-
+<br/>
+<br/>
+<br/>
 <div class="form row">
-  <table class="striped">
+  <table class="striped scroll">
     <thead>
     <tr>
       <th>#</th>
@@ -27,16 +25,16 @@
 
         <td>
           <%= link_to article_path(article.id)  do %>
-              <i class="material-icons">pageview</i>
+              <i class="material-icons purple-text">pageview</i>
           <% end %>
         </td>
         <td>
-          <%= link_to   do %>
+          <%= link_to edit_article_path(article)  do %>
               <i class="material-icons">edit</i>
           <% end %>
         </td>
         <td>
-          <%= link_to   do %>
+          <%= link_to article_path(article), method: 'delete', data: {confirm: "Are you sure you want to delete?"}  do %>
               <i class="material-icons materialize-red-text">delete</i>
           <% end %>
         </td>
@@ -44,7 +42,8 @@
     <% end %>
     </tbody>
   </table>
-  <%= link_to new_article_path, class: 'btn-floating right btn-large waves-effect waves-light purple'  do %>
-    <i class="material-icons">add</i>
-  <% end %>
 </div>
+
+<%= link_to new_article_path, class: 'btn-floating right btn-large waves-effect waves-light purple'  do %>
+    <i class="material-icons">note_add</i>
+<% end %>

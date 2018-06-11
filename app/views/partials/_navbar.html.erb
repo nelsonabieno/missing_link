@@ -1,14 +1,17 @@
 <nav>
   <div class="nav-wrapper  white">
-    <a href="/" class="brand-logo">
+    <%= link_to root_path, class: 'brand-logo' do %>
       <i class="material-icons brown-text darken-4 link_logo">people</i>
       <i class="material-icons brown-text darken-4 link_logo">wifi</i>
       <i class="material-icons brown-text darken-4 link_logo">people</i>
-    </a>
+    <% end %>
 
     <ul id="nav-mobile" class="right hide-on-med-and-down">
       <li> <%= link_to "About Us", home_about_path, {:class => "brown-text darken-4"} %></li>
       <li> <%= link_to "Services", home_about_path, {:class => "brown-text darken-4"} %></li>
+      <li>
+        <%= render 'partials/listlink' %>
+      </li>
     </ul>
   </div>
 </nav>

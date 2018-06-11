@@ -3,11 +3,11 @@
 <br/>
   <% if @article.errors.any?%>
     <div class="card red lighten-2">
-      <% @article.errors.full_messages.each do |msg| %>
-          <ul>
-            <li> <%= msg %></li>
-          </ul>
-      <%end%>
+      <ul>
+        <% @article.errors.full_messages.each do |msg| %>
+              <li> <%= msg %></li>
+        <%end%>
+      </ul>
     </div>
   <% end%>
 <%= render 'partials/form'%>
