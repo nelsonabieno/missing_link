@@ -1,0 +1,15 @@
+<h5> Showing Article #<%=@article.id %></h5>
+<br/>
+<br/>
+<% if flash[:notice]%>
+    <div class="card green lighten-2">
+      <h5><%=flash[:notice]%></h5>
+    </div>
+<% end %>
+<div class="form row">
+  <%= render 'partials/listlink' %>
+  <%= label_tag "Title" %>
+  <%= text_field_tag "title", value = @article.title %> <br/> <br/>
+  <%= label_tag "Description" %>
+  <%= text_field_tag "description",value = @article.description %>
+</div>

@@ -1,0 +1,49 @@
+<% if flash[:notice]%>
+    <div class="card green lighten-2">
+      <h5><%=flash[:notice]%></h5>
+    </div>
+<%end %>
+<br/>
+<br/>
+<br/>
+<div class="form row">
+  <table class="striped scroll">
+    <thead>
+    <tr>
+      <th>#</th>
+      <th>Title</th>
+      <th>Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+        <th><%= article.id %></th>
+        <td><%= article.title %></td>
+        <td><%= article.description %></td>
+
+        <td>
+          <%= link_to article_path(article.id)  do %>
+              <i class="material-icons purple-text">pageview</i>
+          <% end %>
+        </td>
+        <td>
+          <%= link_to edit_article_path(article)  do %>
+              <i class="material-icons">edit</i>
+          <% end %>
+        </td>
+        <td>
+          <%= link_to article_path(article), method: 'delete', data: {confirm: "Are you sure you want to delete?"}  do %>
+              <i class="material-icons materialize-red-text">delete</i>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
+
+<%= link_to new_article_path, class: 'btn-floating right btn-large waves-effect waves-light purple'  do %>
+    <i class="material-icons">note_add</i>
+<% end %>
