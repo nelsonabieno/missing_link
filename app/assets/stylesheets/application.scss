@@ -1,6 +1,11 @@
 @import "materialize";
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
 
+body {
+  margin: 0;
+  background-color: antiquewhite;
+}
+
 body > .home {
   margin-top: 100px;
 }
